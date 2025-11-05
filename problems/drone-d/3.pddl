@@ -1,0 +1,187 @@
+(define (problem drone)
+(:domain drone)
+(:objects 
+	loc0 - location
+	loc1 - location
+	loc2 - location
+	loc3 - location
+	loc4 - location
+	loc5 - location
+	loc6 - location
+	loc7 - location
+	loc8 - location
+	loc9 - location
+	loc10 - location
+	loc11 - location
+	loc12 - location
+	loc13 - location
+	loc14 - location
+	loc15 - location
+	loc16 - location
+	loc17 - location
+	loc18 - location
+	loc19 - location
+	loc20 - location
+	loc21 - location
+	loc22 - location
+	loc23 - location
+	loc24 - location
+	loc25 - location
+	loc26 - location
+	loc27 - location
+	loc28 - location
+	loc29 - location
+)
+(:bounds 
+	(>= (deltax) 0)
+	(>= (deltay) 0)
+	(>= (deltaz) 0)
+	(<= (deltax) 3)
+	(<= (deltay) 3)
+	(<= (deltaz) 3)
+)
+(:precision 
+	(= (deltax) 0)
+	(= (deltay) 0)
+	(= (deltaz) 0)
+)
+(:init
+	(= (x) 0)
+	(= (y) 0)
+	(= (z) 0)
+	(= (min_x) 0)
+	(= (min_y) 0)
+	(= (min_z) 0)
+	(= (max_x) 3)
+	(= (max_y) 3)
+	(= (max_z) 3)
+	(= (xl loc0) 2)
+	(= (yl loc0) 1)
+	(= (zl loc0) 0)
+	(= (xl loc1) 0)
+	(= (yl loc1) 3)
+	(= (zl loc1) 0)
+	(= (xl loc2) 2)
+	(= (yl loc2) 1)
+	(= (zl loc2) 3)
+	(= (xl loc3) 0)
+	(= (yl loc3) 3)
+	(= (zl loc3) 3)
+	(= (xl loc4) 3)
+	(= (yl loc4) 2)
+	(= (zl loc4) 1)
+	(= (xl loc5) 2)
+	(= (yl loc5) 3)
+	(= (zl loc5) 0)
+	(= (xl loc6) 0)
+	(= (yl loc6) 2)
+	(= (zl loc6) 1)
+	(= (xl loc7) 2)
+	(= (yl loc7) 3)
+	(= (zl loc7) 3)
+	(= (xl loc8) 1)
+	(= (yl loc8) 1)
+	(= (zl loc8) 0)
+	(= (xl loc9) 3)
+	(= (yl loc9) 0)
+	(= (zl loc9) 3)
+	(= (xl loc10) 2)
+	(= (yl loc10) 0)
+	(= (zl loc10) 1)
+	(= (xl loc11) 0)
+	(= (yl loc11) 3)
+	(= (zl loc11) 2)
+	(= (xl loc12) 3)
+	(= (yl loc12) 2)
+	(= (zl loc12) 0)
+	(= (xl loc13) 1)
+	(= (yl loc13) 2)
+	(= (zl loc13) 1)
+	(= (xl loc14) 0)
+	(= (yl loc14) 2)
+	(= (zl loc14) 0)
+	(= (xl loc15) 1)
+	(= (yl loc15) 1)
+	(= (zl loc15) 2)
+	(= (xl loc16) 3)
+	(= (yl loc16) 0)
+	(= (zl loc16) 2)
+	(= (xl loc17) 2)
+	(= (yl loc17) 2)
+	(= (zl loc17) 0)
+	(= (xl loc18) 0)
+	(= (yl loc18) 1)
+	(= (zl loc18) 1)
+	(= (xl loc19) 2)
+	(= (yl loc19) 2)
+	(= (zl loc19) 3)
+	(= (xl loc20) 2)
+	(= (yl loc20) 1)
+	(= (zl loc20) 1)
+	(= (xl loc21) 1)
+	(= (yl loc21) 2)
+	(= (zl loc21) 0)
+	(= (xl loc22) 3)
+	(= (yl loc22) 1)
+	(= (zl loc22) 3)
+	(= (xl loc23) 3)
+	(= (yl loc23) 1)
+	(= (zl loc23) 0)
+	(= (xl loc24) 1)
+	(= (yl loc24) 2)
+	(= (zl loc24) 3)
+	(= (xl loc25) 0)
+	(= (yl loc25) 0)
+	(= (zl loc25) 2)
+	(= (xl loc26) 2)
+	(= (yl loc26) 3)
+	(= (zl loc26) 1)
+	(= (xl loc27) 3)
+	(= (yl loc27) 0)
+	(= (zl loc27) 1)
+	(= (xl loc28) 1)
+	(= (yl loc28) 0)
+	(= (zl loc28) 2)
+	(= (xl loc29) 1)
+	(= (yl loc29) 1)
+	(= (zl loc29) 1)
+	(= (battery-level) 47)
+	(= (battery-level-full) 47)
+)
+(:goal (and
+	(visited loc0)
+	(visited loc1)
+	(visited loc2)
+	(visited loc3)
+	(visited loc4)
+	(visited loc5)
+	(visited loc6)
+	(visited loc7)
+	(visited loc8)
+	(visited loc9)
+	(visited loc10)
+	(visited loc11)
+	(visited loc12)
+	(visited loc13)
+	(visited loc14)
+	(visited loc15)
+	(visited loc16)
+	(visited loc17)
+	(visited loc18)
+	(visited loc19)
+	(visited loc20)
+	(visited loc21)
+	(visited loc22)
+	(visited loc23)
+	(visited loc24)
+	(visited loc25)
+	(visited loc26)
+	(visited loc27)
+	(visited loc28)
+	(visited loc29)
+	(= (x) 0)
+	(= (y) 0)
+	(= (z) 0)
+))
+)
+
