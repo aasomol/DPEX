@@ -15,6 +15,7 @@
 	(= (cash) 0)
 )
 (:init
+	(canwithdraw location1)
 	(at location0)
 	(canbuy location1 item0)
 	(canbuy location0 item1)
