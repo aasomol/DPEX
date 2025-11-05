@@ -49,20 +49,6 @@ Run the planner as follows:
 ./DPEX <domain_file> <problem_file> [options]
 ```
 
-### Available options
-
-| Option                  | Type   | Description                                                      | Default       |
-| ----------------------- | ------ | ---------------------------------------------------------------- | ------------- |
-| `-debug`                | flag   | Enable debug mode                                                | `false`       |
-| `-nogreedy`             | flag   | Use node depth instead of heuristic                              | `false`       |
-| `-rect <function_name>` | string | Rectification function: `linear` | `superlinear` | `logarithmic` | `logarithmic` |
-| `-alpha <value>`        | float  | Alpha parameter for rectification                                | `1`           |
-| `-phi <function_name>`  | string | Sampling function: `uniform` | `systematic` | `heuristic`        | `uniform`     |
-| `-samples <number>`     | int    | Number of samples for heuristic sampling                         | `10`          |
-| `-hf <function_name>`   | string | Heuristic function: `gc` | `ngc` | `blind`                       | `ngc`         |
-| `-seed <number>`        | int    | Seed for sampling                                                | `random`      |
-| `-max_its <number>`     | int    | Maximum number of iterations                                     | `100000000`   |
-
 ---
 
 ## Notes
