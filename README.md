@@ -49,6 +49,8 @@ Run the planner as follows:
 ./DPEX <domain_file> <problem_file> [options]
 ```
 
+For information about the options, run `./DPEX`. 
+
 ---
 
 ## Notes
