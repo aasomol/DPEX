@@ -1,12 +1,12 @@
 # DPEX — Delayed Partial EXpansions Planner
 
-The **DPEX (Delayed Partial EXpansions)** planner is an automated planning system developed for the **Control Variables Framework**, an extension of classical PDDL planning that supports **infinite decision spaces** through *control variables*.
+The **DPEX (Delayed Partial EXpansions)** planner is an automated planning system developed for the **Control Variables Framework**, an extension of numeric PDDL planning that supports **infinite decision spaces** through *control variables*.
 
 ---
 
 ## Overview
 
-DPEX extends the PDDL syntax in a **minimally invasive** way to include **control variables**, enabling actions with parameters that take values from infinite domains. This allows the planner to operate over decision spaces that go beyond the finite, discrete nature of standard PDDL.
+DPEX extends the PDDL syntax in a **minimally invasive** way to include **control variables**, enabling the definition of **free** variables that act as decision points in the search. This allows the planner to operate over decision spaces that go beyond the finite, discrete nature of standard PDDL. Control variables are numeric variables that the planner needs to decide at each step.
 
 ---
 
