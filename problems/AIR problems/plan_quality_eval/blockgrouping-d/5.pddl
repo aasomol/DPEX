@@ -1,0 +1,110 @@
+(define (problem blockgrouping)
+(:domain blockgrouping)
+(:objects 
+	b0 - block
+	b1 - block
+	b2 - block
+	b3 - block
+	b4 - block
+	b5 - block
+	b6 - block
+	b7 - block
+	b8 - block
+	b9 - block
+	b10 - block
+	b11 - block
+	b12 - block
+	b13 - block
+	b14 - block
+)
+(:bounds 
+	(<= (delta) 19)
+	(>= (delta) 0)
+)
+(:precision 
+	(= (delta) 0)
+)
+(:init
+	(= (x b0) 2)
+	(= (y b0) 10)
+	(= (x b1) 5)
+	(= (y b1) 19)
+	(= (x b2) 18)
+	(= (y b2) 6)
+	(= (x b3) 2)
+	(= (y b3) 11)
+	(= (x b4) 13)
+	(= (y b4) 11)
+	(= (x b5) 14)
+	(= (y b5) 15)
+	(= (x b6) 12)
+	(= (y b6) 6)
+	(= (x b7) 20)
+	(= (y b7) 19)
+	(= (x b8) 5)
+	(= (y b8) 10)
+	(= (x b9) 18)
+	(= (y b9) 12)
+	(= (x b10) 13)
+	(= (y b10) 11)
+	(= (x b11) 19)
+	(= (y b11) 2)
+	(= (x b12) 18)
+	(= (y b12) 1)
+	(= (x b13) 17)
+	(= (y b13) 1)
+	(= (x b14) 14)
+	(= (y b14) 4)
+	(= (max_x) 20)
+	(= (min_x) 0)
+	(= (max_y) 20)
+	(= (min_y) 0)
+)
+(:goal (and
+	(= (x b0) (x b7))
+	(= (y b0) (y b7))
+	(= (x b0) (x b8))
+	(= (y b0) (y b8))
+	(= (x b0) (x b10))
+	(= (y b0) (y b10))
+	(= (x b0) (x b11))
+	(= (y b0) (y b11))
+	(= (x b1) (x b12))
+	(= (y b1) (y b12))
+	(= (x b1) (x b14))
+	(= (y b1) (y b14))
+	(= (x b2) (x b4))
+	(= (y b2) (y b4))
+	(= (x b2) (x b5))
+	(= (y b2) (y b5))
+	(= (x b2) (x b9))
+	(= (y b2) (y b9))
+	(= (x b3) (x b6))
+	(= (y b3) (y b6))
+	(= (x b3) (x b13))
+	(= (y b3) (y b13))
+	(= (x b4) (x b5))
+	(= (y b4) (y b5))
+	(= (x b4) (x b9))
+	(= (y b4) (y b9))
+	(= (x b5) (x b9))
+	(= (y b5) (y b9))
+	(= (x b6) (x b13))
+	(= (y b6) (y b13))
+	(= (x b7) (x b8))
+	(= (y b7) (y b8))
+	(= (x b7) (x b10))
+	(= (y b7) (y b10))
+	(= (x b7) (x b11))
+	(= (y b7) (y b11))
+	(= (x b8) (x b10))
+	(= (y b8) (y b10))
+	(= (x b8) (x b11))
+	(= (y b8) (y b11))
+	(= (x b10) (x b11))
+	(= (y b10) (y b11))
+	(= (x b12) (x b14))
+	(= (y b12) (y b14))
+))
+)
+

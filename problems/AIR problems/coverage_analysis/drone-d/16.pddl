@@ -1,0 +1,837 @@
+(define (problem drone)
+(:domain drone)
+(:objects 
+	loc0 - location
+	loc1 - location
+	loc2 - location
+	loc3 - location
+	loc4 - location
+	loc5 - location
+	loc6 - location
+	loc7 - location
+	loc8 - location
+	loc9 - location
+	loc10 - location
+	loc11 - location
+	loc12 - location
+	loc13 - location
+	loc14 - location
+	loc15 - location
+	loc16 - location
+	loc17 - location
+	loc18 - location
+	loc19 - location
+	loc20 - location
+	loc21 - location
+	loc22 - location
+	loc23 - location
+	loc24 - location
+	loc25 - location
+	loc26 - location
+	loc27 - location
+	loc28 - location
+	loc29 - location
+	loc30 - location
+	loc31 - location
+	loc32 - location
+	loc33 - location
+	loc34 - location
+	loc35 - location
+	loc36 - location
+	loc37 - location
+	loc38 - location
+	loc39 - location
+	loc40 - location
+	loc41 - location
+	loc42 - location
+	loc43 - location
+	loc44 - location
+	loc45 - location
+	loc46 - location
+	loc47 - location
+	loc48 - location
+	loc49 - location
+	loc50 - location
+	loc51 - location
+	loc52 - location
+	loc53 - location
+	loc54 - location
+	loc55 - location
+	loc56 - location
+	loc57 - location
+	loc58 - location
+	loc59 - location
+	loc60 - location
+	loc61 - location
+	loc62 - location
+	loc63 - location
+	loc64 - location
+	loc65 - location
+	loc66 - location
+	loc67 - location
+	loc68 - location
+	loc69 - location
+	loc70 - location
+	loc71 - location
+	loc72 - location
+	loc73 - location
+	loc74 - location
+	loc75 - location
+	loc76 - location
+	loc77 - location
+	loc78 - location
+	loc79 - location
+	loc80 - location
+	loc81 - location
+	loc82 - location
+	loc83 - location
+	loc84 - location
+	loc85 - location
+	loc86 - location
+	loc87 - location
+	loc88 - location
+	loc89 - location
+	loc90 - location
+	loc91 - location
+	loc92 - location
+	loc93 - location
+	loc94 - location
+	loc95 - location
+	loc96 - location
+	loc97 - location
+	loc98 - location
+	loc99 - location
+	loc100 - location
+	loc101 - location
+	loc102 - location
+	loc103 - location
+	loc104 - location
+	loc105 - location
+	loc106 - location
+	loc107 - location
+	loc108 - location
+	loc109 - location
+	loc110 - location
+	loc111 - location
+	loc112 - location
+	loc113 - location
+	loc114 - location
+	loc115 - location
+	loc116 - location
+	loc117 - location
+	loc118 - location
+	loc119 - location
+	loc120 - location
+	loc121 - location
+	loc122 - location
+	loc123 - location
+	loc124 - location
+	loc125 - location
+	loc126 - location
+	loc127 - location
+	loc128 - location
+	loc129 - location
+	loc130 - location
+	loc131 - location
+	loc132 - location
+	loc133 - location
+	loc134 - location
+	loc135 - location
+	loc136 - location
+	loc137 - location
+	loc138 - location
+	loc139 - location
+	loc140 - location
+	loc141 - location
+	loc142 - location
+	loc143 - location
+	loc144 - location
+	loc145 - location
+	loc146 - location
+	loc147 - location
+	loc148 - location
+	loc149 - location
+	loc150 - location
+	loc151 - location
+	loc152 - location
+	loc153 - location
+	loc154 - location
+	loc155 - location
+	loc156 - location
+	loc157 - location
+	loc158 - location
+	loc159 - location
+)
+(:bounds 
+	(>= (deltax) 0)
+	(>= (deltay) 0)
+	(>= (deltaz) 0)
+	(<= (deltax) 6)
+	(<= (deltay) 6)
+	(<= (deltaz) 6)
+)
+(:precision 
+	(= (deltax) 0)
+	(= (deltay) 0)
+	(= (deltaz) 0)
+)
+(:init
+	(= (x) 0)
+	(= (y) 0)
+	(= (z) 0)
+	(= (min_x) 0)
+	(= (min_y) 0)
+	(= (min_z) 0)
+	(= (max_x) 6)
+	(= (max_y) 6)
+	(= (max_z) 6)
+	(= (xl loc0) 5)
+	(= (yl loc0) 1)
+	(= (zl loc0) 6)
+	(= (xl loc1) 5)
+	(= (yl loc1) 4)
+	(= (zl loc1) 2)
+	(= (xl loc2) 3)
+	(= (yl loc2) 5)
+	(= (zl loc2) 0)
+	(= (xl loc3) 4)
+	(= (yl loc3) 0)
+	(= (zl loc3) 1)
+	(= (xl loc4) 1)
+	(= (yl loc4) 6)
+	(= (zl loc4) 6)
+	(= (xl loc5) 0)
+	(= (yl loc5) 3)
+	(= (zl loc5) 3)
+	(= (xl loc6) 6)
+	(= (yl loc6) 6)
+	(= (zl loc6) 4)
+	(= (xl loc7) 5)
+	(= (yl loc7) 2)
+	(= (zl loc7) 4)
+	(= (xl loc8) 1)
+	(= (yl loc8) 3)
+	(= (zl loc8) 0)
+	(= (xl loc9) 3)
+	(= (yl loc9) 1)
+	(= (zl loc9) 5)
+	(= (xl loc10) 3)
+	(= (yl loc10) 6)
+	(= (zl loc10) 1)
+	(= (xl loc11) 6)
+	(= (yl loc11) 4)
+	(= (zl loc11) 6)
+	(= (xl loc12) 1)
+	(= (yl loc12) 1)
+	(= (zl loc12) 0)
+	(= (xl loc13) 3)
+	(= (yl loc13) 0)
+	(= (zl loc13) 3)
+	(= (xl loc14) 5)
+	(= (yl loc14) 3)
+	(= (zl loc14) 5)
+	(= (xl loc15) 1)
+	(= (yl loc15) 5)
+	(= (zl loc15) 0)
+	(= (xl loc16) 5)
+	(= (yl loc16) 6)
+	(= (zl loc16) 1)
+	(= (xl loc17) 2)
+	(= (yl loc17) 0)
+	(= (zl loc17) 1)
+	(= (xl loc18) 4)
+	(= (yl loc18) 0)
+	(= (zl loc18) 3)
+	(= (xl loc19) 6)
+	(= (yl loc19) 1)
+	(= (zl loc19) 1)
+	(= (xl loc20) 4)
+	(= (yl loc20) 2)
+	(= (zl loc20) 0)
+	(= (xl loc21) 1)
+	(= (yl loc21) 3)
+	(= (zl loc21) 2)
+	(= (xl loc22) 5)
+	(= (yl loc22) 5)
+	(= (zl loc22) 5)
+	(= (xl loc23) 3)
+	(= (yl loc23) 3)
+	(= (zl loc23) 4)
+	(= (xl loc24) 3)
+	(= (yl loc24) 6)
+	(= (zl loc24) 3)
+	(= (xl loc25) 6)
+	(= (yl loc25) 2)
+	(= (zl loc25) 2)
+	(= (xl loc26) 4)
+	(= (yl loc26) 1)
+	(= (zl loc26) 4)
+	(= (xl loc27) 0)
+	(= (yl loc27) 0)
+	(= (zl loc27) 0)
+	(= (xl loc28) 4)
+	(= (yl loc28) 3)
+	(= (zl loc28) 1)
+	(= (xl loc29) 1)
+	(= (yl loc29) 1)
+	(= (zl loc29) 2)
+	(= (xl loc30) 1)
+	(= (yl loc30) 5)
+	(= (zl loc30) 2)
+	(= (xl loc31) 2)
+	(= (yl loc31) 2)
+	(= (zl loc31) 0)
+	(= (xl loc32) 3)
+	(= (yl loc32) 5)
+	(= (zl loc32) 4)
+	(= (xl loc33) 4)
+	(= (yl loc33) 0)
+	(= (zl loc33) 5)
+	(= (xl loc34) 4)
+	(= (yl loc34) 4)
+	(= (zl loc34) 5)
+	(= (xl loc35) 4)
+	(= (yl loc35) 6)
+	(= (zl loc35) 2)
+	(= (xl loc36) 1)
+	(= (yl loc36) 4)
+	(= (zl loc36) 3)
+	(= (xl loc37) 4)
+	(= (yl loc37) 1)
+	(= (zl loc37) 6)
+	(= (xl loc38) 3)
+	(= (yl loc38) 4)
+	(= (zl loc38) 5)
+	(= (xl loc39) 2)
+	(= (yl loc39) 4)
+	(= (zl loc39) 0)
+	(= (xl loc40) 1)
+	(= (yl loc40) 1)
+	(= (zl loc40) 4)
+	(= (xl loc41) 2)
+	(= (yl loc41) 0)
+	(= (zl loc41) 5)
+	(= (xl loc42) 6)
+	(= (yl loc42) 0)
+	(= (zl loc42) 6)
+	(= (xl loc43) 3)
+	(= (yl loc43) 5)
+	(= (zl loc43) 6)
+	(= (xl loc44) 0)
+	(= (yl loc44) 1)
+	(= (zl loc44) 3)
+	(= (xl loc45) 2)
+	(= (yl loc45) 6)
+	(= (zl loc45) 2)
+	(= (xl loc46) 5)
+	(= (yl loc46) 0)
+	(= (zl loc46) 4)
+	(= (xl loc47) 5)
+	(= (yl loc47) 5)
+	(= (zl loc47) 0)
+	(= (xl loc48) 3)
+	(= (yl loc48) 1)
+	(= (zl loc48) 2)
+	(= (xl loc49) 1)
+	(= (yl loc49) 3)
+	(= (zl loc49) 6)
+	(= (xl loc50) 2)
+	(= (yl loc50) 4)
+	(= (zl loc50) 2)
+	(= (xl loc51) 0)
+	(= (yl loc51) 0)
+	(= (zl loc51) 4)
+	(= (xl loc52) 5)
+	(= (yl loc52) 1)
+	(= (zl loc52) 5)
+	(= (xl loc53) 5)
+	(= (yl loc53) 3)
+	(= (zl loc53) 2)
+	(= (xl loc54) 2)
+	(= (yl loc54) 3)
+	(= (zl loc54) 6)
+	(= (xl loc55) 5)
+	(= (yl loc55) 4)
+	(= (zl loc55) 1)
+	(= (xl loc56) 2)
+	(= (yl loc56) 2)
+	(= (zl loc56) 4)
+	(= (xl loc57) 0)
+	(= (yl loc57) 1)
+	(= (zl loc57) 5)
+	(= (xl loc58) 4)
+	(= (yl loc58) 4)
+	(= (zl loc58) 0)
+	(= (xl loc59) 5)
+	(= (yl loc59) 2)
+	(= (zl loc59) 3)
+	(= (xl loc60) 2)
+	(= (yl loc60) 5)
+	(= (zl loc60) 6)
+	(= (xl loc61) 3)
+	(= (yl loc61) 3)
+	(= (zl loc61) 1)
+	(= (xl loc62) 0)
+	(= (yl loc62) 2)
+	(= (zl loc62) 3)
+	(= (xl loc63) 5)
+	(= (yl loc63) 4)
+	(= (zl loc63) 3)
+	(= (xl loc64) 5)
+	(= (yl loc64) 6)
+	(= (zl loc64) 0)
+	(= (xl loc65) 2)
+	(= (yl loc65) 1)
+	(= (zl loc65) 1)
+	(= (xl loc66) 4)
+	(= (yl loc66) 4)
+	(= (zl loc66) 2)
+	(= (xl loc67) 6)
+	(= (yl loc67) 5)
+	(= (zl loc67) 0)
+	(= (xl loc68) 2)
+	(= (yl loc68) 6)
+	(= (zl loc68) 6)
+	(= (xl loc69) 5)
+	(= (yl loc69) 2)
+	(= (zl loc69) 5)
+	(= (xl loc70) 1)
+	(= (yl loc70) 3)
+	(= (zl loc70) 1)
+	(= (xl loc71) 1)
+	(= (yl loc71) 4)
+	(= (zl loc71) 0)
+	(= (xl loc72) 3)
+	(= (yl loc72) 2)
+	(= (zl loc72) 5)
+	(= (xl loc73) 6)
+	(= (yl loc73) 4)
+	(= (zl loc73) 1)
+	(= (xl loc74) 5)
+	(= (yl loc74) 4)
+	(= (zl loc74) 5)
+	(= (xl loc75) 0)
+	(= (yl loc75) 6)
+	(= (zl loc75) 5)
+	(= (xl loc76) 0)
+	(= (yl loc76) 1)
+	(= (zl loc76) 0)
+	(= (xl loc77) 5)
+	(= (yl loc77) 0)
+	(= (zl loc77) 1)
+	(= (xl loc78) 2)
+	(= (yl loc78) 5)
+	(= (zl loc78) 1)
+	(= (xl loc79) 4)
+	(= (yl loc79) 4)
+	(= (zl loc79) 4)
+	(= (xl loc80) 4)
+	(= (yl loc80) 6)
+	(= (zl loc80) 1)
+	(= (xl loc81) 6)
+	(= (yl loc81) 6)
+	(= (zl loc81) 1)
+	(= (xl loc82) 1)
+	(= (yl loc82) 2)
+	(= (zl loc82) 5)
+	(= (xl loc83) 2)
+	(= (yl loc83) 3)
+	(= (zl loc83) 3)
+	(= (xl loc84) 3)
+	(= (yl loc84) 0)
+	(= (zl loc84) 0)
+	(= (xl loc85) 1)
+	(= (yl loc85) 6)
+	(= (zl loc85) 2)
+	(= (xl loc86) 6)
+	(= (yl loc86) 1)
+	(= (zl loc86) 4)
+	(= (xl loc87) 2)
+	(= (yl loc87) 1)
+	(= (zl loc87) 5)
+	(= (xl loc88) 5)
+	(= (yl loc88) 0)
+	(= (zl loc88) 3)
+	(= (xl loc89) 5)
+	(= (yl loc89) 2)
+	(= (zl loc89) 0)
+	(= (xl loc90) 2)
+	(= (yl loc90) 5)
+	(= (zl loc90) 3)
+	(= (xl loc91) 4)
+	(= (yl loc91) 6)
+	(= (zl loc91) 3)
+	(= (xl loc92) 0)
+	(= (yl loc92) 3)
+	(= (zl loc92) 2)
+	(= (xl loc93) 4)
+	(= (yl loc93) 5)
+	(= (zl loc93) 5)
+	(= (xl loc94) 6)
+	(= (yl loc94) 5)
+	(= (zl loc94) 4)
+	(= (xl loc95) 3)
+	(= (yl loc95) 6)
+	(= (zl loc95) 0)
+	(= (xl loc96) 1)
+	(= (yl loc96) 0)
+	(= (zl loc96) 0)
+	(= (xl loc97) 6)
+	(= (yl loc97) 4)
+	(= (zl loc97) 5)
+	(= (xl loc98) 0)
+	(= (yl loc98) 4)
+	(= (zl loc98) 3)
+	(= (xl loc99) 3)
+	(= (yl loc99) 0)
+	(= (zl loc99) 2)
+	(= (xl loc100) 0)
+	(= (yl loc100) 5)
+	(= (zl loc100) 2)
+	(= (xl loc101) 0)
+	(= (yl loc101) 6)
+	(= (zl loc101) 0)
+	(= (xl loc102) 1)
+	(= (yl loc102) 6)
+	(= (zl loc102) 4)
+	(= (xl loc103) 5)
+	(= (yl loc103) 0)
+	(= (zl loc103) 5)
+	(= (xl loc104) 2)
+	(= (yl loc104) 5)
+	(= (zl loc104) 5)
+	(= (xl loc105) 6)
+	(= (yl loc105) 6)
+	(= (zl loc105) 5)
+	(= (xl loc106) 3)
+	(= (yl loc106) 2)
+	(= (zl loc106) 2)
+	(= (xl loc107) 6)
+	(= (yl loc107) 2)
+	(= (zl loc107) 1)
+	(= (xl loc108) 4)
+	(= (yl loc108) 3)
+	(= (zl loc108) 0)
+	(= (xl loc109) 1)
+	(= (yl loc109) 1)
+	(= (zl loc109) 1)
+	(= (xl loc110) 3)
+	(= (yl loc110) 0)
+	(= (zl loc110) 4)
+	(= (xl loc111) 5)
+	(= (yl loc111) 3)
+	(= (zl loc111) 6)
+	(= (xl loc112) 2)
+	(= (yl loc112) 1)
+	(= (zl loc112) 0)
+	(= (xl loc113) 5)
+	(= (yl loc113) 6)
+	(= (zl loc113) 2)
+	(= (xl loc114) 6)
+	(= (yl loc114) 0)
+	(= (zl loc114) 3)
+	(= (xl loc115) 6)
+	(= (yl loc115) 3)
+	(= (zl loc115) 2)
+	(= (xl loc116) 4)
+	(= (yl loc116) 4)
+	(= (zl loc116) 1)
+	(= (xl loc117) 4)
+	(= (yl loc117) 5)
+	(= (zl loc117) 0)
+	(= (xl loc118) 1)
+	(= (yl loc118) 2)
+	(= (zl loc118) 2)
+	(= (xl loc119) 0)
+	(= (yl loc119) 3)
+	(= (zl loc119) 6)
+	(= (xl loc120) 3)
+	(= (yl loc120) 2)
+	(= (zl loc120) 4)
+	(= (xl loc121) 3)
+	(= (yl loc121) 4)
+	(= (zl loc121) 1)
+	(= (xl loc122) 3)
+	(= (yl loc122) 6)
+	(= (zl loc122) 4)
+	(= (xl loc123) 6)
+	(= (yl loc123) 2)
+	(= (zl loc123) 3)
+	(= (xl loc124) 1)
+	(= (yl loc124) 0)
+	(= (zl loc124) 4)
+	(= (xl loc125) 1)
+	(= (yl loc125) 1)
+	(= (zl loc125) 3)
+	(= (xl loc126) 3)
+	(= (yl loc126) 0)
+	(= (zl loc126) 6)
+	(= (xl loc127) 1)
+	(= (yl loc127) 5)
+	(= (zl loc127) 3)
+	(= (xl loc128) 2)
+	(= (yl loc128) 2)
+	(= (zl loc128) 1)
+	(= (xl loc129) 3)
+	(= (yl loc129) 5)
+	(= (zl loc129) 5)
+	(= (xl loc130) 6)
+	(= (yl loc130) 5)
+	(= (zl loc130) 1)
+	(= (xl loc131) 5)
+	(= (yl loc131) 0)
+	(= (zl loc131) 0)
+	(= (xl loc132) 4)
+	(= (yl loc132) 5)
+	(= (zl loc132) 2)
+	(= (xl loc133) 4)
+	(= (yl loc133) 0)
+	(= (zl loc133) 6)
+	(= (xl loc134) 6)
+	(= (yl loc134) 6)
+	(= (zl loc134) 0)
+	(= (xl loc135) 2)
+	(= (yl loc135) 5)
+	(= (zl loc135) 0)
+	(= (xl loc136) 1)
+	(= (yl loc136) 2)
+	(= (zl loc136) 4)
+	(= (xl loc137) 2)
+	(= (yl loc137) 6)
+	(= (zl loc137) 1)
+	(= (xl loc138) 3)
+	(= (yl loc138) 4)
+	(= (zl loc138) 3)
+	(= (xl loc139) 3)
+	(= (yl loc139) 2)
+	(= (zl loc139) 6)
+	(= (xl loc140) 1)
+	(= (yl loc140) 3)
+	(= (zl loc140) 5)
+	(= (xl loc141) 2)
+	(= (yl loc141) 3)
+	(= (zl loc141) 2)
+	(= (xl loc142) 3)
+	(= (yl loc142) 6)
+	(= (zl loc142) 6)
+	(= (xl loc143) 4)
+	(= (yl loc143) 3)
+	(= (zl loc143) 4)
+	(= (xl loc144) 6)
+	(= (yl loc144) 4)
+	(= (zl loc144) 2)
+	(= (xl loc145) 1)
+	(= (yl loc145) 0)
+	(= (zl loc145) 6)
+	(= (xl loc146) 5)
+	(= (yl loc146) 1)
+	(= (zl loc146) 4)
+	(= (xl loc147) 5)
+	(= (yl loc147) 3)
+	(= (zl loc147) 1)
+	(= (xl loc148) 2)
+	(= (yl loc148) 1)
+	(= (zl loc148) 4)
+	(= (xl loc149) 5)
+	(= (yl loc149) 6)
+	(= (zl loc149) 6)
+	(= (xl loc150) 2)
+	(= (yl loc150) 2)
+	(= (zl loc150) 3)
+	(= (xl loc151) 2)
+	(= (yl loc151) 0)
+	(= (zl loc151) 6)
+	(= (xl loc152) 6)
+	(= (yl loc152) 1)
+	(= (zl loc152) 6)
+	(= (xl loc153) 2)
+	(= (yl loc153) 5)
+	(= (zl loc153) 2)
+	(= (xl loc154) 4)
+	(= (yl loc154) 5)
+	(= (zl loc154) 4)
+	(= (xl loc155) 6)
+	(= (yl loc155) 3)
+	(= (zl loc155) 6)
+	(= (xl loc156) 1)
+	(= (yl loc156) 5)
+	(= (zl loc156) 5)
+	(= (xl loc157) 2)
+	(= (yl loc157) 6)
+	(= (zl loc157) 3)
+	(= (xl loc158) 2)
+	(= (yl loc158) 4)
+	(= (zl loc158) 3)
+	(= (xl loc159) 3)
+	(= (yl loc159) 0)
+	(= (zl loc159) 1)
+	(= (battery-level) 47)
+	(= (battery-level-full) 47)
+)
+(:goal (and
+	(visited loc0)
+	(visited loc1)
+	(visited loc2)
+	(visited loc3)
+	(visited loc4)
+	(visited loc5)
+	(visited loc6)
+	(visited loc7)
+	(visited loc8)
+	(visited loc9)
+	(visited loc10)
+	(visited loc11)
+	(visited loc12)
+	(visited loc13)
+	(visited loc14)
+	(visited loc15)
+	(visited loc16)
+	(visited loc17)
+	(visited loc18)
+	(visited loc19)
+	(visited loc20)
+	(visited loc21)
+	(visited loc22)
+	(visited loc23)
+	(visited loc24)
+	(visited loc25)
+	(visited loc26)
+	(visited loc27)
+	(visited loc28)
+	(visited loc29)
+	(visited loc30)
+	(visited loc31)
+	(visited loc32)
+	(visited loc33)
+	(visited loc34)
+	(visited loc35)
+	(visited loc36)
+	(visited loc37)
+	(visited loc38)
+	(visited loc39)
+	(visited loc40)
+	(visited loc41)
+	(visited loc42)
+	(visited loc43)
+	(visited loc44)
+	(visited loc45)
+	(visited loc46)
+	(visited loc47)
+	(visited loc48)
+	(visited loc49)
+	(visited loc50)
+	(visited loc51)
+	(visited loc52)
+	(visited loc53)
+	(visited loc54)
+	(visited loc55)
+	(visited loc56)
+	(visited loc57)
+	(visited loc58)
+	(visited loc59)
+	(visited loc60)
+	(visited loc61)
+	(visited loc62)
+	(visited loc63)
+	(visited loc64)
+	(visited loc65)
+	(visited loc66)
+	(visited loc67)
+	(visited loc68)
+	(visited loc69)
+	(visited loc70)
+	(visited loc71)
+	(visited loc72)
+	(visited loc73)
+	(visited loc74)
+	(visited loc75)
+	(visited loc76)
+	(visited loc77)
+	(visited loc78)
+	(visited loc79)
+	(visited loc80)
+	(visited loc81)
+	(visited loc82)
+	(visited loc83)
+	(visited loc84)
+	(visited loc85)
+	(visited loc86)
+	(visited loc87)
+	(visited loc88)
+	(visited loc89)
+	(visited loc90)
+	(visited loc91)
+	(visited loc92)
+	(visited loc93)
+	(visited loc94)
+	(visited loc95)
+	(visited loc96)
+	(visited loc97)
+	(visited loc98)
+	(visited loc99)
+	(visited loc100)
+	(visited loc101)
+	(visited loc102)
+	(visited loc103)
+	(visited loc104)
+	(visited loc105)
+	(visited loc106)
+	(visited loc107)
+	(visited loc108)
+	(visited loc109)
+	(visited loc110)
+	(visited loc111)
+	(visited loc112)
+	(visited loc113)
+	(visited loc114)
+	(visited loc115)
+	(visited loc116)
+	(visited loc117)
+	(visited loc118)
+	(visited loc119)
+	(visited loc120)
+	(visited loc121)
+	(visited loc122)
+	(visited loc123)
+	(visited loc124)
+	(visited loc125)
+	(visited loc126)
+	(visited loc127)
+	(visited loc128)
+	(visited loc129)
+	(visited loc130)
+	(visited loc131)
+	(visited loc132)
+	(visited loc133)
+	(visited loc134)
+	(visited loc135)
+	(visited loc136)
+	(visited loc137)
+	(visited loc138)
+	(visited loc139)
+	(visited loc140)
+	(visited loc141)
+	(visited loc142)
+	(visited loc143)
+	(visited loc144)
+	(visited loc145)
+	(visited loc146)
+	(visited loc147)
+	(visited loc148)
+	(visited loc149)
+	(visited loc150)
+	(visited loc151)
+	(visited loc152)
+	(visited loc153)
+	(visited loc154)
+	(visited loc155)
+	(visited loc156)
+	(visited loc157)
+	(visited loc158)
+	(visited loc159)
+	(= (x) 0)
+	(= (y) 0)
+	(= (z) 0)
+))
+)
+

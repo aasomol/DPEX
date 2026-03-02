@@ -1,0 +1,142 @@
+(define (problem procurement)
+(:domain procurement)
+(:objects 
+	A - itemA
+	B - itemB
+	C - itemC
+	D - itemD
+	E - itemE
+	F - itemF
+	G - itemG
+	H - itemH
+	I - itemI
+	J - itemJ
+	K - itemK
+	L - itemL
+	M - itemM
+	N - itemN
+	O - itemO
+	P - itemP
+	Q - itemQ
+	R - itemR
+	S - itemS
+	supplier0 - supplier
+	supplier1 - supplier
+	supplier2 - supplier
+	supplier3 - supplier
+	supplier4 - supplier
+	supplier5 - supplier
+	supplier6 - supplier
+	supplier7 - supplier
+	supplier8 - supplier
+	supplier9 - supplier
+	supplier10 - supplier
+	supplier11 - supplier
+	customer0 - customer
+	customer1 - customer
+	customer2 - customer
+	customer3 - customer
+	customer4 - customer
+	customer5 - customer
+	customer6 - customer
+	customer7 - customer
+	customer8 - customer
+	customer9 - customer
+	customer10 - customer
+	customer11 - customer
+	workshop0 - workshop
+	workshop1 - workshop
+	workshop2 - workshop
+	workshop3 - workshop
+	workshop4 - workshop
+	workshop5 - workshop
+	workshop6 - workshop
+	workshop7 - workshop
+	workshop8 - workshop
+	workshop9 - workshop
+	workshop10 - workshop
+	workshop11 - workshop
+)
+(:bounds
+	(<= (batchsize) 100)
+	(>= (batchsize) 0)
+)
+(:precision 
+	(= (batchsize) 3)
+)
+(:init
+	(can_produce_A workshop8)
+	(can_produce_B workshop6)
+	(can_produce_C workshop6)
+	(can_produce_F workshop10)
+	(can_produce_H workshop6)
+	(can_produce_K workshop6)
+	(can_produce_L workshop7)
+	(can_produce_M workshop5)
+	(can_supply_D supplier10)
+	(can_supply_E supplier4)
+	(can_supply_G supplier11)
+	(can_supply_I supplier4)
+	(can_supply_J supplier0)
+	(can_supply_N supplier2)
+	(can_supply_O supplier3)
+	(can_supply_P supplier10)
+	(can_supply_Q supplier11)
+	(can_supply_R supplier7)
+	(can_supply_S supplier7)
+	(at workshop11)
+	(= (stock A) 0)
+	(= (stock B) 0)
+	(= (stock C) 0)
+	(= (stock D) 0)
+	(= (stock E) 0)
+	(= (stock F) 0)
+	(= (stock G) 0)
+	(= (stock H) 0)
+	(= (stock I) 0)
+	(= (stock J) 0)
+	(= (stock K) 0)
+	(= (stock L) 0)
+	(= (stock M) 0)
+	(= (stock N) 0)
+	(= (stock O) 0)
+	(= (stock P) 0)
+	(= (stock Q) 0)
+	(= (stock R) 0)
+	(= (stock S) 0)
+	(= (item-goal A) 12)
+	(= (item-goal B) 9)
+	(= (item-goal C) 9)
+	(= (item-goal D) 10)
+	(= (item-goal E) 8)
+	(= (item-goal F) 9)
+	(= (item-goal G) 4)
+	(= (item-goal H) 5)
+	(= (item-goal I) 3)
+	(= (item-goal J) 7)
+	(= (item-goal K) 12)
+	(= (item-goal L) 4)
+	(= (item-goal M) 14)
+	(= (item-goal N) 12)
+	(= (item-goal O) 9)
+	(= (item-goal P) 4)
+	(= (item-goal Q) 6)
+	(= (item-goal R) 1)
+	(= (item-goal S) 7)
+)
+(:goal (and
+	(delivered K customer0)
+	(delivered L customer1)
+	(delivered F customer2)
+	(delivered E customer3)
+	(delivered Q customer4)
+	(delivered I customer5)
+	(delivered G customer6)
+	(delivered N customer7)
+	(delivered S customer8)
+	(delivered C customer9)
+	(delivered H customer10)
+	(delivered B customer11)
+))
+)
+
